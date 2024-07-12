@@ -29,27 +29,27 @@ let orderQueue: any = [];
 //   return newOrder;
 // };
 
-const completeOrder = (orderId: number) => {
-  const order = orderQueue.find(
-    (order: { id: number }) => order.id === orderId
-  );
-  order.status = "completed";
-  return order;
-};
+// const completeOrder = (orderId: number) => {
+//   const order = orderQueue.find(
+//     (order: { id: number }) => order.id === orderId
+//   );
+//   order.status = "completed";
+//   return order;
+// };
 
 // addNewPizza({ name: "Chicken Bacon Ranch", cost: 12 });
 // addNewPizza({ name: "BBQ Chicken", cost: 12 });
 // addNewPizza({ name: "Spicy Sausage", cost: 11 });
 
 // placeOrder("Chicken Bacon Ranch");
-completeOrder(1);
+// completeOrder(1);
 
-console.log("Menu", menu);
-console.log("Cash in register:", cashInRegister);
-console.log("Order queue:", orderQueue);
+// console.log("Menu", menu);
+// console.log("Cash in register:", cashInRegister);
+// console.log("Order queue:", orderQueue);
 
 const index = () => {
-  return <div>Defensive Coding</div>;
+  return <div>PizzaRestaurantApp</div>;
 };
 
 export default index;
