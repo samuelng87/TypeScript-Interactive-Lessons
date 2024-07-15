@@ -28,7 +28,7 @@ const addNewPizza = (pizzaObj: Pizza) => {
 const placeOrder = (pizzaName: String) => {
   const selectedPizza = menu.find((pizzaObj) => pizzaObj.name === pizzaName);
   if (!selectedPizza) {
-    console.error(`AddingOrderType: ${pizzaName} does not exist in the menu`);
+    console.error(`Custom Error: ${pizzaName} does not exist in the menu`);
     return;
   }
   cashInRegister += selectedPizza.price;
