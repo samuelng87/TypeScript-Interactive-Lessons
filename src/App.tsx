@@ -10,6 +10,7 @@ import AddingOrderType from "./Lessons/AddingOrderType";
 import TypingArrays from "./Lessons/TypingArrays";
 import TypeOrderQueue from "./Lessons/TypeOrderQueue";
 import LiteralTypes from "./Lessons/LiteralTypes";
+import Unions from "./Lessons/Unions";
 function App() {
   return (
     <div className="App">
@@ -20,8 +21,9 @@ function App() {
       <OptionalProperties />
       <AddingOrderType />
       <TypingArrays />
-      <TypeOrderQueue /> */}
-      <LiteralTypes />
+      <TypeOrderQueue /> 
+      <LiteralTypes />*/}
+      <Unions />
     </div>
   );
 }

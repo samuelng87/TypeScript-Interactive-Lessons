@@ -1,3 +1,5 @@
+// Combine Concept: Literal Types and Unions
+
 let myName: "Bob" = "Bob";
 const nyNam: "Bob" = "Bob";
 
