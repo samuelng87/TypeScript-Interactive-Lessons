@@ -5,6 +5,7 @@ import ObligatoryTypes from "./Lessons/ObligatoryTypes/";
 import PizzaRestaurantApp from "./Lessons/PizzaRestaurantApp";
 import DefiningCustomTypes from "./Lessons/DefiningCustomTypes";
 import NestedObjectTypes from "./Lessons/NestedObjectTypes";
+import OptionalProperties from "./Lessons/OptionalProperties";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ObligatoryTypes />
       <DefiningCustomTypes />
       <NestedObjectTypes />
+      <OptionalProperties />
     </div>
   );
 }

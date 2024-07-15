@@ -1,4 +1,3 @@
-//NestedObjectTypes
 type Address = {
   street: string;
   city: string;
@@ -9,20 +8,13 @@ type Person = {
   name: string;
   age: number;
   isStudent: boolean;
-  //NestedObjectTypes
-  address: Address;
+  address?: Address; //OptionalProperties
 };
 
 let person1: Person = {
   name: "Joe",
   age: 42,
   isStudent: true,
-  //NestedObjectTypes
-  address: {
-    street: "123 street",
-    city: "Canberra",
-    country: "Aus",
-  },
 };
 
 let person2: Person = {
@@ -35,9 +27,17 @@ let person2: Person = {
     country: "Aus",
   },
 };
-
-const NestedObjectTypes = () => {
-  return <div>NestedObjectTypes</div>;
+//OptionalProperties
+const displayInfo = (person: Person) => {
+  console.log(
+    `OptionalProperties: ${person.name} lives at ${person.address?.street}`
+  );
 };
 
-export default NestedObjectTypes;
+displayInfo(person1);
+
+const OptionalProperties = () => {
+  return <div>OptionalProperties</div>;
+};
+
+export default OptionalProperties;
