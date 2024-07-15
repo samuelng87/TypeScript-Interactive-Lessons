@@ -3,7 +3,6 @@ type Pizza = {
   price: number;
 };
 
-//AddingOrderType
 type Order = {
   id: number;
   pizza: Pizza;
@@ -17,14 +16,16 @@ const menu = [
   { name: "Veggie", price: 9 },
 ];
 
-let cashInRegister = 100;
+let cashInRegister = 0;
 let nextOrderId = 1;
-let orderQueue: any = [];
+let orderQueue: Order[] = [];
 
+// Add New Pizza
 const addNewPizza = (pizzaObj: Pizza) => {
   menu.push(pizzaObj);
 };
 
+// Place Order
 const placeOrder = (pizzaName: String) => {
   const selectedPizza = menu.find((pizzaObj) => pizzaObj.name === pizzaName);
   if (!selectedPizza) {
@@ -41,10 +42,13 @@ const placeOrder = (pizzaName: String) => {
   return newOrder;
 };
 
+// Complete Order
 const completeOrder = (orderId: number) => {
-  const order = orderQueue.find(
-    (order: { id: number }) => order.id === orderId
-  );
+  const order = orderQueue.find((order) => order.id === orderId);
+  if (!order) {
+    console.error(`Custom Error: ${orderId} was not found in the order Queue`);
+    return;
+  }
   order.status = "completed";
   return order;
 };
@@ -54,12 +58,14 @@ addNewPizza({ name: "BBQ Chicken", price: 12 });
 addNewPizza({ name: "Spicy Sausage", price: 11 });
 
 placeOrder("Chicken Bacon Ranch");
-completeOrder(1);
+placeOrder("Chicken Bacon Ranch");
+placeOrder("Spicy Sausage");
 
-console.log("AddingOrderType");
 console.log("Menu", menu);
 console.log("Cash in register:", cashInRegister);
 console.log("Order queue:", orderQueue);
+console.log("Next Order ID:", nextOrderId);
+console.log("Completed Order", completeOrder(2));
 
 const TypeOrderQueue = () => {
   return <div>TypeOrderQueue - Pizza Restaurant App</div>;

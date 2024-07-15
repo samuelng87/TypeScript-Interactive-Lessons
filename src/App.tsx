@@ -12,13 +12,6 @@ import TypeOrderQueue from "./Lessons/TypeOrderQueue";
 function App() {
   return (
     <div className="App">
-      <PizzaRestaurantApp />
-      <ObligatoryTypes />
-      <DefiningCustomTypes />
-      <NestedObjectTypes />
-      <OptionalProperties />
-      <AddingOrderType />
-      <TypingArrays />
       <TypeOrderQueue />
     </div>
   );
