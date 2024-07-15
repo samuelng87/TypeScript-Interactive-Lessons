@@ -6,7 +6,8 @@ type Pizza = {
 type Order = {
   id: number;
   pizza: Pizza;
-  status: string;
+  //UpdateOrderStatusLiteralTypesUnions
+  status: "ordered" | "completed";
 };
 
 const menu = [
@@ -33,7 +34,8 @@ const placeOrder = (pizzaName: String) => {
     return;
   }
   cashInRegister += selectedPizza.price;
-  const newOrder = {
+  //UpdateOrderStatusLiteralTypesUnions
+  const newOrder: Order = {
     id: nextOrderId++,
     pizza: selectedPizza,
     status: "ordered",
