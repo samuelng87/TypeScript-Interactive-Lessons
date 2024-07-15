@@ -9,10 +9,21 @@ import OptionalProperties from "./Lessons/OptionalProperties";
 import AddingOrderType from "./Lessons/AddingOrderType";
 import TypingArrays from "./Lessons/TypingArrays";
 import TypeOrderQueue from "./Lessons/TypeOrderQueue";
+import LiteralTypes from "./Lessons/LiteralTypes";
+import Unions from "./Lessons/Unions";
 function App() {
   return (
     <div className="App">
-      <TypeOrderQueue />
+      {/* <PizzaRestaurantApp />
+      <ObligatoryTypes />
+      <DefiningCustomTypes />
+      <NestedObjectTypes />
+      <OptionalProperties />
+      <AddingOrderType />
+      <TypingArrays />
+      <TypeOrderQueue /> 
+      <LiteralTypes />*/}
+      <Unions />
     </div>
   );
 }
