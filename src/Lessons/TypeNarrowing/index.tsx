@@ -54,21 +54,13 @@ const completeOrder = (orderId: number) => {
   return order;
 };
 
-export const getPizzaDetail = (
-  identifier: string | number
-): Pizza | undefined => {
-  //FunctionReturnTypes
-
+export const getPizzaDetail = (identifier: string | number) => {
   if (typeof identifier === "string") {
     return menu.find(
       (pizza) => pizza.name.toLowerCase() === identifier.toLowerCase()
     );
-  } else if (typeof identifier === "number") {
-    return menu.find((pizza) => pizza.id === identifier);
   } else {
-    throw new TypeError(
-      "Parameter `identifier` must be either a string or a number"
-    );
+    return menu.find((pizza) => pizza.id === identifier);
   }
 };
 
@@ -84,11 +76,11 @@ placeOrder("Spicy Sausage");
 // console.log("Cash in register:", cashInRegister);
 // console.log("Order queue:", orderQueue);
 // console.log("Next Order ID:", nextOrderId);
-// console.log("Completed Order", completeOrder(3));
-console.log(getPizzaDetail(1));
+console.log("Completed Order", completeOrder(3));
+console.log(getPizzaDetail("SPICY SAUSAGE"));
 
-const PizzaRestaurantApp = () => {
-  return <div>PizzaRestaurantApp</div>;
+const TypeNarrowing = () => {
+  return <div>TypeNarrowing</div>;
 };
 
-export default PizzaRestaurantApp;
+export default TypeNarrowing;

@@ -11,19 +11,21 @@ import TypingArrays from "./Lessons/TypingArrays";
 import TypeOrderQueue from "./Lessons/TypeOrderQueue";
 import LiteralTypes from "./Lessons/LiteralTypes";
 import Unions from "./Lessons/Unions";
+import FunctionReturnTypes from "./Lessons/FunctionReturnTypes";
 function App() {
   return (
     <div className="App">
-      {/* <PizzaRestaurantApp />
-      <ObligatoryTypes />
+      <PizzaRestaurantApp />
+      {/* <ObligatoryTypes />
       <DefiningCustomTypes />
       <NestedObjectTypes />
       <OptionalProperties />
       <AddingOrderType />
       <TypingArrays />
       <TypeOrderQueue /> 
-      <LiteralTypes />*/}
+      <LiteralTypes />
       <Unions />
+      <FunctionReturnTypes /> */}
     </div>
   );
 }
