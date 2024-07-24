@@ -22,12 +22,14 @@ let nextOrderId = 1;
 let orderQueue: Order[] = [];
 
 // Add New Pizza
-const addNewPizza = (pizzaObj: Pizza) => {
+const addNewPizza = (pizzaObj: Pizza): void => {
+  //VoidReturnType
   menu.push(pizzaObj);
 };
 
 // Place Order
-const placeOrder = (pizzaName: String) => {
+const placeOrder = (pizzaName: String): Order | undefined => {
+  //VoidReturnType
   const selectedPizza = menu.find((pizzaObj) => pizzaObj.name === pizzaName);
   if (!selectedPizza) {
     console.error(`Custom Error: ${pizzaName} does not exist in the menu`);
@@ -44,7 +46,8 @@ const placeOrder = (pizzaName: String) => {
 };
 
 // Complete Order
-const completeOrder = (orderId: number) => {
+const completeOrder = (orderId: number): Order | undefined => {
+  //VoidReturnType
   const order = orderQueue.find((order) => order.id === orderId);
   if (!order) {
     console.error(`Custom Error: ${orderId} was not found in the order Queue`);
